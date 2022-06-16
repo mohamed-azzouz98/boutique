@@ -13,7 +13,7 @@ function inscription()
             if(!empty($_POST['login']) and !empty($_POST['password']) and !empty($_POST['confirmpassword']) )
             {
 
-                $connexion = mysqli_connect('localhost','root','','boutique');
+                $connexion = mysqli_connect('Localhost','boutique','boutique123','boutique');
                 $requeteUser = "SELECT * FROM utilisateurs WHERE login='".$_POST['login']."'";
                 $queryUser = mysqli_query($connexion, $requeteUser);
                 $resultatUser = mysqli_fetch_row($queryUser);
@@ -80,7 +80,7 @@ function connexion()
         {
             if(!empty($_POST['login']) and !empty($_POST['password']))
             {
-                $connexion = mysqli_connect('Localhost','root','','boutique');
+                $connexion = mysqli_connect('Localhost','boutique','boutique123','boutique');
                 $requeteLogUser = "SELECT * FROM utilisateurs WHERE login='".$_POST['login']."'";
                 $queryLogUser = mysqli_query($connexion, $requeteLogUser);
                 $resultatLogUser = mysqli_fetch_assoc($queryLogUser);
@@ -135,7 +135,7 @@ function newCategorie()
     {
        if (isset($_POST['addCategorie'])) 
        {
-            $connexion = mysqli_connect('Localhost','root','','boutique');
+            $connexion = mysqli_connect('Localhost','boutique','boutique123','boutique');
             $requeteCat = "SELECT * FROM categories WHERE nom = '".$_POST['categorie']."'";
             $queryCat = mysqli_query($connexion, $requeteCat);
             $resultatCat = mysqli_fetch_all($queryCat);
@@ -167,7 +167,7 @@ function addSubCat()
     {
         if (isset($_POST['addSubCat'])) 
        {
-            $connexion = mysqli_connect('Localhost','root','','boutique');
+            $connexion = mysqli_connect('Localhost','boutique','boutique123','boutique');
             $requeteSubCat = "SELECT * FROM sous_categorie INNER JOIN categories ON sous_categorie.id_categorie = categories.id WHERE categories.nom = '".$_POST['categorie']."' AND sous_categorie.nom ='".$_POST['subCat']."' ";
             $querySubCat = mysqli_query($connexion, $requeteSubCat);
             $resultatSubCat = mysqli_fetch_all($querySubCat);
@@ -207,7 +207,7 @@ function addArticle()
             
             
 
-            $connexion = mysqli_connect('Localhost','root','','boutique');
+            $connexion = mysqli_connect('Localhost','boutique','boutique123','boutique');
 
             $requeteCat = "SELECT * FROM categories WHERE nom = '".$_POST['categorie']."'";
             $queryCat = mysqli_query($connexion, $requeteCat);
@@ -287,7 +287,7 @@ function searchBar()
         {
             $recherche = strtolower($recherche);
 
-            $connexion = mysqli_connect('Localhost','root','','boutique');
+            $connexion = mysqli_connect('Localhost','boutique','boutique123','boutique');
 
             $requeteSearch = "SELECT * FROM produits WHERE nom LIKE '%$recherche%' ";
             $querySearch = mysqli_query($connexion, $requeteSearch);

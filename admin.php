@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-$connexion = mysqli_connect('Localhost','root','','boutique');
+$connexion = mysqli_connect('Localhost','boutique','boutique123','boutique');
 include('fonctions.php');
 ob_start();
 

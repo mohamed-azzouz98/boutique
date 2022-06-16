@@ -3,7 +3,7 @@
     session_start();
     include('fonctions.php');
     ob_start();
-    $connexion = mysqli_connect("localhost", "root" ,"","boutique");
+    $connexion = mysqli_connect('Localhost','boutique','boutique123','boutique');
     $getId = $_GET['id'];
 
     $requeteInfosProfil = "SELECT * FROM utilisateurs WHERE id ='".$getId."'";

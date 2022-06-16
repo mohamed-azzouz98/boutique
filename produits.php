@@ -4,7 +4,7 @@
     include('fonctions.php');
     ob_start();
     $getIdProduit = $_GET['id'];
-    $connexion = mysqli_connect('Localhost','root','','boutique');
+    $connexion = mysqli_connect('Localhost','boutique','boutique123','boutique');
     $requeteDonneesProduits = "SELECT * FROM produits WHERE id=\"$getIdProduit\"";
     $queryDonneesProduits = mysqli_query($connexion,$requeteDonneesProduits);
     $resultatDonneesProduits = mysqli_fetch_all($queryDonneesProduits);

@@ -5,7 +5,7 @@
     include('fonctions.php');
     ob_start();
 
-    $connexion = mysqli_connect('Localhost','root','','boutique');
+    $connexion = mysqli_connect('Localhost','boutique','boutique123','boutique');
 
     $requeteListeJeux = "SELECT * FROM produits ORDER BY id DESC LIMIT 5";
     $queryListeJeux = mysqli_query($connexion,$requeteListeJeux);

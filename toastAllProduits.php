@@ -35,7 +35,7 @@ $idUser = $_SESSION['id'];
 
 
 
-					$connexion = mysqli_connect('Localhost','root','','boutique');
+					$connexion = mysqli_connect('Localhost','boutique','boutique123','boutique');
 					$requeteInfosArticle = "SELECT * FROM produits INNER JOIN categories ON produits.id_categorie = categories.id INNER JOIN sous_categorie ON produits.id_sous_categorie = sous_categorie.id";
 					$queryInfosArticle = mysqli_query($connexion, $requeteInfosArticle);
 					$resultInfosArticle = mysqli_fetch_all($queryInfosArticle);

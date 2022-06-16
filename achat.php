@@ -2,7 +2,7 @@
 session_start();
 include('fonctions.php');
 
-$connexion = mysqli_connect('Localhost','root','','boutique');
+$connexion = mysqli_connect('Localhost','boutique','boutique123','boutique');
 
 ?>
 
